@@ -116,5 +116,6 @@ int initPendingRequests(sClient* list, int len);
 /// @return sClient - Retorna los datos del cliente encontrado.
 sClient searchClientById(sClient* list, int len, int id);
 //---------------------------------------------------------------------------------
+int initCompletedRequests(sClient* list, int len);
 
 #endif /* CLIENTS_H_ */

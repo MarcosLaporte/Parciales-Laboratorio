@@ -307,7 +307,7 @@ int printLocalityRequests(sClient* list, int len, sLocality* localList, int loca
 	return Return;
 }
 
-int calcMostRequestsClient(sClient* cliList, int cliLen, sLocality* localList, int localLen, sClient* mostRequestClient){
+int calcMostPendingRequestsClient(sClient* cliList, int cliLen, sLocality* localList, int localLen, sClient* mostRequestClient){
 	int Return;
 	int maxRequests;
 	Return = -1;
@@ -356,6 +356,26 @@ int calcMostCompletedRequestsClient(sClient* cliList, int cliLen, sLocality* loc
 
 	return Return;
 }
+
+int calcMostRequestsClient(sClient* cliList, int cliLen, sLocality* localList, int localLen, sClient* mostRequestClient){
+	int Return;
+	int maxRequests;
+	Return = -1;
+	maxRequests = 0;
+
+	if(cliList != NULL && cliLen > 0 && localList != NULL && localLen > 0){
+		for(int i = 0; i < cliLen; i++){
+			if(cliList[i].status == FULL && (cliList[i].pendingRequests + cliList[i].completedRequests) > maxRequests){
+				maxRequests = cliList[i].pendingRequests + cliList[i].completedRequests;
+				*mostRequestClient = cliList[i];
+				Return = 0;
+			}
+		}
+	}
+
+	return Return;
+}
+
 
 
 void hardcodeClients(sClient* clientsList, sRequest* requestList, int maxClients, int* ids, int maxRequests, int* reqIds){
@@ -495,7 +515,7 @@ void hardcodeClients(sClient* clientsList, sRequest* requestList, int maxClients
 
 	for(int i = 0; i < maxClients; i++){
 		clientsList[i].id = i+1;
-		*ids = clientsList[i].id;
+		*ids = clientsList[i].id+1;
 		strcpy(clientsList[i].companyName, names[i]);
 		strcpy(clientsList[i].cuit, cuit[i]);
 		strcpy(clientsList[i].direction.address, address[i]);
@@ -503,12 +523,13 @@ void hardcodeClients(sClient* clientsList, sRequest* requestList, int maxClients
 		clientsList[i].direction.idLocal = locality[i];
 //		strcpy(clientsList[i].direction.locality, locality[i]);
 		clientsList[i].pendingRequests = 0;
+		clientsList[i].completedRequests = 0;
 		clientsList[i].status = FULL;
 	}
 
 	for(int i = 0; i < maxRequests; i++){
 		requestList[i].id = i+1;
-		*reqIds = requestList[i].id;
+		*reqIds = requestList[i].id+1;
 		requestList[i].kilosTotal = totalK[i];
 		requestList[i].kilosHDPE = totalHDPE[i];
 		requestList[i].kilosLDPE = totalLDPE[i];

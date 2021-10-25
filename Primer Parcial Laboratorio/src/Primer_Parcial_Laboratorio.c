@@ -62,6 +62,7 @@ int main(void) {
 
 	initClients(arrayClients, MAX_CLIENT);
 	initRequests(arrayRequest, MAX_REQUEST);
+	initCompletedRequests(arrayClients, MAX_CLIENT);
 	hardcodeClients(arrayClients, arrayRequest, 100, &clientsId, 1000, &reqId);
 
 	do{
@@ -197,7 +198,7 @@ int main(void) {
 			if(checkAClient(arrayClients, MAX_CLIENT) == -1){
 				printf("ERROR! No se han ingresado clientes.\n");
 			}else{
-				if(calcMostRequestsClient(arrayClients, MAX_CLIENT, arrayLocality, MAX_LOCAL, &mostPendingRequest) == -1){
+				if(calcMostPendingRequestsClient(arrayClients, MAX_CLIENT, arrayLocality, MAX_LOCAL, &mostPendingRequest) == -1){
 					printf("ERROR! No hay pedidos pendientes.\n");
 				}else{
 					printMostRequestsClient(mostPendingRequest, arrayLocality, MAX_LOCAL);
@@ -210,6 +211,17 @@ int main(void) {
 			}else{
 				if(calcMostCompletedRequestsClient(arrayClients, MAX_CLIENT, arrayLocality, MAX_LOCAL, &mostCompletedRequest) == -1){
 					printf("ERROR! No hay pedidos completados.\n");
+				}else{
+					printMostRequestsClient(mostCompletedRequest, arrayLocality, MAX_LOCAL);
+				}
+			}
+			break;
+		case 13:
+			if(checkAClient(arrayClients, MAX_CLIENT) == -1){
+				printf("ERROR! No se han ingresado clientes.\n");
+			}else{
+				if(calcMostRequestsClient(arrayClients, MAX_CLIENT, arrayLocality, MAX_LOCAL, &mostCompletedRequest) == -1){
+					printf("ERROR! No hay pedidos de ningún tipo.\n");
 				}else{
 					printMostRequestsClient(mostCompletedRequest, arrayLocality, MAX_LOCAL);
 				}

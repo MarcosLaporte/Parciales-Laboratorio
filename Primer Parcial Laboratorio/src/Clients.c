@@ -223,6 +223,20 @@ int initPendingRequests(sClient* list, int len){
 	return Return;
 }
 
+int initCompletedRequests(sClient* list, int len){
+	int Return;
+	Return = -1;
+
+	if(list != NULL && len > 0){
+		for(int i = 0; i < len; i++){
+			Return = 0;
+			list[i].completedRequests = 0;
+		}
+	}
+
+	return Return;
+}
+
 sClient searchClientById(sClient* list, int len, int id){
 	sClient aux;
 
