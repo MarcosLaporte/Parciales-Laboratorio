@@ -21,7 +21,7 @@
 /// @param requestList - Puntero al array de pedidos.
 /// @param reqLen - Tamaño del array de pedidos.
 /// @param requestId - Valor del ID a asignar al pedido.
-/// @return int - Retorna -1 si no encuentra espacio, o 0 si está todo bien.
+/// @return int - Retorna -1 si no existe el ID ingresado, 0 si no encuentra espacio, o 1 si está todo bien.
 int addRequest(sClient* clientsList, int cliLen, sRequest* requestList, int reqLen, int requestId);
 //---------------------------------------------------------------------------------
 /// @brief Imprime la lista de pedidos pendientes con encabezado, llamando a la función printPendingRequests()
