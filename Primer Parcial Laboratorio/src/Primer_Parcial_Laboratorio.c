@@ -55,8 +55,7 @@ int main(void) {
 	int r;
 	int reqId;
 	float averagePP;
-	sClient mostPendingRequest;
-	sClient mostCompletedRequest;
+	int aux;
 	clientsId = 1;
 	reqId = 1;
 
@@ -198,10 +197,10 @@ int main(void) {
 			if(checkAClient(arrayClients, MAX_CLIENT) == -1){
 				printf("ERROR! No se han ingresado clientes.\n");
 			}else{
-				if(calcMostPendingRequestsClient(arrayClients, MAX_CLIENT, arrayLocality, MAX_LOCAL, &mostPendingRequest) == -1){
+				if(calcMostRequests(arrayClients, MAX_CLIENT, PENDING, &aux) == -1){
 					printf("ERROR! No hay pedidos pendientes.\n");
 				}else{
-					printMostRequestsClient(mostPendingRequest, arrayLocality, MAX_LOCAL);
+					printClientsMaxRequests(arrayClients, MAX_CLIENT, arrayLocality, MAX_LOCAL, PENDING, aux);
 				}
 			}
 			break;
@@ -209,10 +208,10 @@ int main(void) {
 			if(checkAClient(arrayClients, MAX_CLIENT) == -1){
 				printf("ERROR! No se han ingresado clientes.\n");
 			}else{
-				if(calcMostCompletedRequestsClient(arrayClients, MAX_CLIENT, arrayLocality, MAX_LOCAL, &mostCompletedRequest) == -1){
+				if(calcMostRequests(arrayClients, MAX_CLIENT, COMPLETED, &aux) == -1){
 					printf("ERROR! No hay pedidos procesados.\n");
 				}else{
-					printMostRequestsClient(mostCompletedRequest, arrayLocality, MAX_LOCAL);
+					printClientsMaxRequests(arrayClients, MAX_CLIENT, arrayLocality, MAX_LOCAL, COMPLETED, aux);
 				}
 			}
 			break;
@@ -220,10 +219,10 @@ int main(void) {
 			if(checkAClient(arrayClients, MAX_CLIENT) == -1){
 				printf("ERROR! No se han ingresado clientes.\n");
 			}else{
-				if(calcMostRequestsClient(arrayClients, MAX_CLIENT, arrayLocality, MAX_LOCAL, &mostCompletedRequest) == -1){
+				if(calcMostRequests(arrayClients, MAX_CLIENT, BOTH, &aux) == -1){
 					printf("ERROR! No hay pedidos de ningún tipo.\n");
 				}else{
-					printMostRequestsClient(mostCompletedRequest, arrayLocality, MAX_LOCAL);
+					printClientsMaxRequests(arrayClients, MAX_CLIENT, arrayLocality, MAX_LOCAL, BOTH, aux);
 				}
 			}
 			break;

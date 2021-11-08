@@ -65,6 +65,18 @@ int loadRequest(sClient* clientsList, int cliLen, sRequest* requestList, int req
 /// 	no concuerda con el mismo pasado por parámetro.
 int countRequestsByClient(sClient* clientsList, int cliLen, sRequest* requestList, int reqLen, int clientId);
 //---------------------------------------------------------------------------------
+/// @brief Se encarga de sumar la cantidad de pedidos procesados de cada cliente. Esta función se llama
+/// 	junto a initCompletedRequests() cada vez que se ingresa o se procesa un pedido.
+///
+/// @param clientsList - Puntero al array de clientes.
+/// @param cliLen - Tamaño del array de clientes.
+/// @param requestList - Puntero al array de pedidos.
+/// @param reqLen - Tamaño del array de pedidos.
+/// @param clientId - El ID del cliente a contar sus pedidos pendientes.
+/// @return int - Retorna -1 si el pedido no está cargado, pendiente y el ID de su cliente
+/// 	no concuerda con el mismo pasado por parámetro.
+int countCompletedRequestsByClient(sClient* clientsList, int cliLen, sRequest* requestList, int reqLen, int clientId);
+//---------------------------------------------------------------------------------
 /// @brief Imprime la lista de pedidos procesados con encabezado, llamando a la función printCompletedRequestByClientId().
 ///
 /// @param clientsList - Puntero al array de clientes.
@@ -102,6 +114,12 @@ int countAveragePP(sClient* clientsList, int cliLen, sRequest* requestList, int 
 /// @return int - Retorna -1 si el cliente pasado por parámetro tiene su 'status' en 0 (VACIO), o 0 si está en 1.
 int printClient(sClient client, sLocality* localList, int localLen);
 //---------------------------------------------------------------------------------
+/// @brief Imprime por pantalla los datos del cliente pasados por parámetro con la cantidad de pedidos procesados.
+///
+/// @param client - El cliente a imprimir.
+/// @return int - Retorna -1 si el cliente pasado por parámetro tiene su 'status' en 0 (VACIO), o 0 si está en 1 (FULL).
+int printClientCompletedRequest(sClient client, sLocality* localList, int localLen);
+//---------------------------------------------------------------------------------
 /// @brief Imprime toda la lista de empleados con un encabezado, llamando a la función printClient().
 ///
 /// @param list - Puntero al array de clientes.
@@ -125,11 +143,7 @@ int printLocalityRequests(sClient* list, int cliLen, sLocality* localList, int l
 /// @return int - Retorna -1 si no encuentra la localidad, o 0 si está todo bien.
 int calculateLocalityRequests(sClient* list, int len, int localityId, int* accum);
 //---------------------------------------------------------------------------------
-int calcMostPendingRequestsClient(sClient* cliList, int cliLen, sLocality* localList, int localLen, sClient* mostRequestClient);
-void printMostRequestsClient(sClient client, sLocality* localList, int localLen);
-int calcMostCompletedRequestsClient(sClient* cliList, int cliLen, sLocality* localList, int localLen, sClient* mostRequestClient);
-int calcMostRequestsClient(sClient* cliList, int cliLen, sLocality* localList, int localLen, sClient* mostRequestClient);
-//---------------------------------------------------------------------------------
+int printClientsMaxRequests(sClient* cliList, int cliLen, sLocality* localList, int localLen, int reqStatus, int max);
 /// @brief Datos hardcodeados para probar el código.
 ///
 /// @param clientsList - Puntero al array de clientes.
