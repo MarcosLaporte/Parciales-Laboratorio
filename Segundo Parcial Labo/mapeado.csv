@@ -1,0 +1,101 @@
+Id,Titulo,Autor,PrecioDesc,IdEdit
+1,Decameron,Giovanni Boccaccio,2297.85,4
+2,Los Cuentos De Canterbury,Geoffrey Chaucer,3042.44,3
+3,La Conciencia De Zeno,Italo Svevo,1868.95,3
+4,Don Quijote De La Mancha,Miguel De Cervantes,3351.49,4
+5,Cuentos Infantiles,Hans Christian Andersen,3869.30,3
+6,El Idiota,Fiodor Dostoievski,4621.77,3
+7,Lolita,Vladimir Nabokov,2992.51,5
+8,Genji Monogatari,Murasaki Shikibu,3820.23,1
+9,Otelo,William Shakespeare,3813.10,5
+10,Mahabharata,Viasa,1665.13,6
+11,Molloy,Samuel Beckett,2171.69,3
+12,El Cuaderno Dorado,Doris Lessing,2845.87,1
+13,Pedro Paramo,Juan Rulfo,3870.20,6
+14,Ramayana,Valmiki,3127.76,5
+15,Los Endemoniados,Fiodor Dostoievski,1543.52,3
+16,Vida De Tristram Shandy,Laurence Sterne,1228.78,1
+17,Fausto,Johann Wolfgang Von Goethe,2519.65,2
+18,Ana Karenina,Lev Tolstoi,2470.63,5
+19,Los Buddenbrook,Thomas Mann,3245.87,5
+20,Hijos De La Medianoche,Salman Rushdie,4082.11,3
+21,La Historia,Elsa Morante,4103.94,2
+22,Cien Anios De Soledad,Gabriel Garcia Marquez,3414.26,1
+23,Shakuntala,Kalidasa,2375.03,2
+24,Ulises,James Joyce,3461.59,2
+25,El Ruido Y La Furia,William Faulkner,1387.73,1
+26,Zorba El Griego,Nikos Kazantzakis,3774.85,3
+27,Hojas De Hierba,Walt Whitman,3658.61,2
+28,Hijos Y Amantes,D. H. Lawrence,4941.33,5
+29,Poemas,Paul Celan,3148.10,4
+30,Cuentos,Edgar Allan Poe,2776.85,1
+31,Masnavi,Rumi,2021.38,4
+32,Casa De Muniecas,Henrik Ibsen,3171.91,1
+33,Berlin Alexanderplatz,Alfred Doblin,4260.69,3
+34,Madame Bovary,Gustave Flaubert,1886.04,6
+35,Saga De Njal,Anonimo,4507.26,6
+36,Las Metamorfosis,Ovidio,4512.23,2
+37,Gargantua Y Pantagruel,Francois Rabelais,1706.90,3
+38,La Seniora Dalloway,Virginia Woolf,4107.54,6
+39,El Sonido De La Montania,Yasunari Kawabata,3947.01,1
+40,Rojo Y Negro,Stendhal,4987.92,5
+41,En Busca Del Tiempo Perdido,Marcel Proust,2020.66,1
+42,Los Hermanos Karamazov,Fiodor Dostoievski,1819.38,2
+43,El Rey Lear,William Shakespeare,4986.37,5
+44,Gran Serton Veredas,Joao Guimaraes Rosa,1805.49,4
+45,Bostan,Saadi,3364.90,3
+46,Poema De Gilgamesh,Anonimo,1643.48,2
+47,El Hombre Sin Atributos,Robert Musil,1497.84,1
+48,Rebelion En La Granja,George Orwell,3887.52,2
+49,El Tambor De Hojalata,Gunter Grass,1980.40,2
+50,Al Faro,Virginia Woolf,1695.36,6
+51,El Hombre Invisible,Ralph Ellison,4871.46,5
+52,La Muerte De Ivan Ilich,Lev Tolstoi,2531.23,5
+53,Huckleberry Finn,Mark Twain,1929.33,1
+54,Hambre,Knut Hamsun,1853.84,3
+55,Papa Goriot,Honore De Balzac,2190.22,4
+56,Las Mil Y Una Noches,Anonimo,3558.14,3
+57,Grandes Esperanzas,Charles Dickens,2463.17,1
+58,Middlemarch,George Eliot,4816.24,4
+59,Hamlet,William Shakespeare,3075.34,6
+60,Gente Independiente,Halldor Laxness,3722.24,6
+61,Viaje Al Fin De La Noche,Louis-Ferdinand Celine,2824.21,3
+62,Relatos Cortos,Franz Kafka,1705.38,5
+63,Ensayo Sobre La Ceguera,Jose Saramago,1584.12,3
+64,Romancero Gitano,Federico Garcia Lorca,2140.15,4
+65,La Educacion Sentimental,Gustave Flaubert,4609.81,5
+66,Eneida,Virgilio,3492.87,6
+67,Libro Del Desasosiego,Fernando Pessoa,2539.88,5
+68,Diario De Un Loco,Lu Xun,4198.87,5
+69,Beloved,Toni Morrison,3202.85,6
+70,Pippi Calzaslargas,Astrid Lindgren,3522.22,3
+71,El Viejo Y El Mar,Ernest Hemingway,1550.73,2
+72,Medea,Euripides,4039.55,6
+73,Tiempo De Migrar Al Norte,Tayeb Salih,3065.85,3
+74,El Proceso,Franz Kafka,4174.71,2
+75,Cumbres Borrascosas,Emily Bronte,4565.09,5
+76,Absalom Absalom,William Faulkner,1679.42,1
+77,Relatos Cortos,Anton Chejov,4675.77,4
+78,Almas Muertas,Nikolai Gogol,2638.08,3
+79,La Montania Magica,Thomas Mann,1610.74,6
+80,Orgullo Y Prejuicio,Jane Austen,4065.69,2
+81,Moby-Dick,Herman Melville,4065.00,6
+82,Hijos De Nuestro Barrio,Naguib Mahfuz,3224.98,1
+83,Los Viajes De Gulliver,Jonathan Swift,4180.33,4
+84,Memorias De Adriano,Marguerite Yourcenar,2627.18,5
+85,Poemas,Giacomo Leopardi,3741.45,1
+86,Crimen Y Castigo,Fiodor Dostoievski,1712.60,3
+87,Todo Se Desmorona,Chinua Achebe,1856.53,2
+88,Libro De Job,Anonimo,2785.63,5
+89,Odisea,Homero,3895.49,4
+90,Jacques El Fatalista,Denis Diderot,2069.23,6
+91,Guerra Y Paz,Lev Tolstoi,3200.45,6
+92,Ficciones,Jorge Luis Borges,3992.64,3
+93,Iliada,Homero,3996.51,6
+94,Amor En Tiempos De Colera,Gabriel Garcia Marquez,4385.37,3
+95,El Extranjero,Albert Camus,2241.51,4
+96,Nostromo,Joseph Conrad,4367.77,3
+97,Divina Comedia,Dante Alighieri,4638.68,5
+98,Edipo Rey,Sofocles,2531.78,6
+99,Ensayos,Michel De Montaigne,3242.49,1
+100,El Castillo,Franz Kafka,4628.09,3
